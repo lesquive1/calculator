@@ -64,6 +64,8 @@ class ViewController: UIViewController {
                 displayLabel.text = "\(Float(previousValue)! / Float(displayLabel.text!)!)"
             default:
                 displayLabel.text = displayLabel.text
+                currentOperator = ""
+                //flagNewOperation = false
             }
             
         }
@@ -73,10 +75,22 @@ class ViewController: UIViewController {
     
     }
     
+    // calculate percentages
     @IBAction func percentButton(_ sender: UIButton) {
         displayLabel.text = "\(Float(displayLabel.text!)! / 100)"
     }
     
+    // Change sign - positice or negative
+    @IBAction func signButton(_ sender: UIButton) {
+        
+        if flagNewOperation {
+            displayLabel.text = "-0"
+            flagNewOperation = false
+        } else {
+            displayLabel.text = "\(Float(displayLabel.text!)! * (-1))"
+        }
+        
+    }
     
     // Clear display
     @IBAction func clearButton(_ sender: UIButton) {
