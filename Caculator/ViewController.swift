@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             displayLabel.text = sender.currentTitle
             flagNewOperation = false
         } else {
+            
             displayLabel.text = "\(displayLabel.text!)\(sender.currentTitle!)"
         }
     }
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
         displayLabel.text = "\(Float(displayLabel.text!)! / 100)"
     }
     
-    // Change sign - positice or negative
+    // Change sign - positive or negative
     @IBAction func signButton(_ sender: UIButton) {
         
         if flagNewOperation {
