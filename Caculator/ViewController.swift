@@ -7,6 +7,11 @@
 //  Copyright © 2017 luis. All rights reserved.
 //
 
+// Date last modified: Jan 23, 2017
+
+// This program allow you to make basic math calculations such as add, subtract, multiply and divide.
+// Aditionally, it calculates percentages
+
 import UIKit
 
 class ViewController: UIViewController {
